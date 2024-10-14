@@ -18,22 +18,22 @@ function App() {
 
   // Se vc quiser pode pegar uns dados de uma API para pegar as tarefas 
   
-  // useEffect(() => {
-  //   async function fetchTasks() {
-  //     // Chamar A Api
-  //   const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=10", {
-  //     method: 'GET'
-  //   });
-  //   // Pegar os dados que ela Retorna
-  //   const data = await response.json()
+  useEffect(() => {
+    async function fetchTasks() {
+      // Chamar A Api
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=10", {
+      method: 'GET'
+    });
+    // Pegar os dados que ela Retorna
+    const data = await response.json()
 
-  //   // Armazenar/Persistir esses dados no State
-  //   setTasks(data)
-  //   }
+    // Armazenar/Persistir esses dados no State
+    setTasks(data)
+    }
 
   //   fetchTasks();
 
-  // }, [])
+  }, [])
 
 
   // função para mostrar as Tasks na pagina 
